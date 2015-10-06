@@ -7,4 +7,8 @@ router.get('/', function(req, res, next) {
   res.render('memesTemplate', {injectedImages: memeData});
 });
 
+router.get("/models", function(req, res){
+  res.send(memeData);
+})
+
 module.exports = router;

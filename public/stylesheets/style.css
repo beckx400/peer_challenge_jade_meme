@@ -1,6 +1,9 @@
 body {
-  padding: 50px;
+  /*padding: 50px;*/
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: black !important;
+  background: url('../images/bokeh.jpg') no-repeat;
+  background-size: cover;
 }
 
 a {
@@ -10,7 +13,22 @@ img{
   width: auto;
   height: 212px;
 }
+.jumbotron{
+  text-align: center;
+  font-size: 100px;
+  background-color: hsla(53, 33%, 72%, 0.31) !important;
+}
+.memeContainer{
+  margin: 0 auto;
+}
+.controller{
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+}
 .individualMeme{
   float: left;
   margin-right: 15px;
+  width: 300px;
+  text-align: center;
 }

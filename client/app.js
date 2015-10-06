@@ -3,6 +3,4 @@
  */
 var app = angular.module('myApp', []);
 
-app.controller("MainController", ['$scope', '$http', function($scope, $http){
-    //$scope.newText = "";
-}]);
+app.controller("MainController", ['$scope', '$http', function($scope, $http){}]);

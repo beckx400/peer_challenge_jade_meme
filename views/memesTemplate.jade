@@ -3,12 +3,14 @@ extends layout
 block title
     title Memes
 block content
-    h1 Memes
-    #memeContainer(ng-controller="MainController")
-        for meme in injectedImages
-            .individualMeme
-                img(src= meme.image)
-                p.memeText(ng-hide="newText")= meme.text
-                p.newText(ng-show="newText") {{newText}}
-                input(type='text' placeholder='Change meme text' ng-model="newText")
-                input(type='submit' value='Submit')
+
+    #memeContainer(ng-app='myApp')
+        h1(class="jumbotron") Memes
+        .controller(ng-controller="MainController")
+            for meme in injectedImages
+                .individualMeme
+                    img(src= meme.image)
+                    h2(class="memeText" ng-hide="caption" + meme.model)= meme.text
+                    h2(ng-model="caption" + meme.model ng-show="caption" + meme.model)= "{{caption" + meme.model+ "}}"
+                    form(ng-submit="submit")
+                        input(type='text' placeholder='Change meme text' ng-model= "caption" + meme.model)
